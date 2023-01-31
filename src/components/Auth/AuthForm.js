@@ -1,9 +1,10 @@
 import classes from './AuthForm.module.css';
 import { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 const AuthForm=()=>{
+    const Navigate=useNavigate();
 
     const [haveAccount, setHaveAccount] = useState(true);
     const emailRef = useRef();
@@ -27,9 +28,14 @@ const AuthForm=()=>{
       }
     
       const loginFormHandler = async (event) => {
+       
+        Navigate("/main")
+        
+      
         event.preventDefault();
     
         if (!haveAccount) {
+           
           if (passwordRef.current.value !== confirmPasswordRef.current.value) {
             return alert('password and confirm password are not same');
           }
@@ -65,6 +71,7 @@ const AuthForm=()=>{
         
         <div className={classes.wrapper}>
             <form className={classes.form} onSubmit={loginFormHandler}>
+             
                 {haveAccount && (<h4>login</h4>)}
                 {!haveAccount && (<h4>sign up</h4>)}
                 <input type='email' placeholder='email' ref={emailRef}/>
@@ -77,11 +84,14 @@ const AuthForm=()=>{
                 <button type='submit'>{haveAccount ? 'Login' : 'Create Account'}</button>
                 {haveAccount ? <Link to='/resetpassword'>Forgot Password?</Link> : ''}
             </form>
+            
+                
             <div className={classes.create} onClick={accountHandler}>
         {haveAccount
           ? `Don't have an account? Sign Up`
           : `Have an account? Sign In`}
       </div>
+     
         </div>
     )
 }

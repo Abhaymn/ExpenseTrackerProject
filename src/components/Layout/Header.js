@@ -1,10 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+
 // import { useContext } from "react";
 import { Container, Nav, Navbar,NavLink } from "react-bootstrap";
 import { Link, Routes,Route ,BrowserRouter} from "react-router-dom";
 import AuthPage from "../pages/AuthPage";
 import Main from "../pages/main";
+import LoginMessage from "../UserProfile/LoginMessage";
 
 // import AuthContext from "../Store/Auth-Context";
 
@@ -29,6 +30,7 @@ const Header=(props)=>{
                 <Route path="/login" element={<AuthPage/>}/>
                
                 <Route path='/main' element={<Main/>}/>
+                <Route path='/resetpassword' element={<LoginMessage/>}/>
                 
                
             </Routes>

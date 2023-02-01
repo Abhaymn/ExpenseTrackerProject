@@ -1,0 +1,47 @@
+.mainProfile {
+    
+    display: flex;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #808080;
+    font-style: italic;
+    font-size: 18px;
+    align-items:flex-end;
+    
+  }
+  
+  .welcome {
+    
+    margin-left: 30px;
+    flex-basis: 75%;
+  }
+  
+  .profile {
+    font-size: 15px;
+    flex-basis: 25%;
+    background-color: #d4c181;
+    border-radius: 20px;
+    margin-right: 5px;
+    padding: 5px 10px 5px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items:flex-end;
+  }
+  
+  .profile a {
+    text-decoration: none;
+  }
+  
+  .button {
+      text-align: center;
+      margin-top: 60px;
+  }
+  
+  .button button {
+      margin: 0 100px 0 100px;
+      padding: 5px 20px 5px 20px;
+  }
+  
+  .button button:active {
+    transform: scale(0.95);
+  }

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 
+
 import classes from './UserProfileForm.module.css';
 
 const UserProfileForm = () => {
@@ -73,9 +74,10 @@ const UserProfileForm = () => {
           throw data.error;
         }
       } catch (err) {
-        console.log(err.message);
+        alert(err.message);
       }
     };
+
 
     updateProfile();
 

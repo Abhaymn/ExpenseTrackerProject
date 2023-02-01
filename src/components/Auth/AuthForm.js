@@ -3,6 +3,11 @@ import { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
+// import { useSelector,useDispatch } from 'react-redux';
+// import { loginActions } from '../Store/loginSlice';
+
+
+
 const AuthForm=()=>{
     const Navigate=useNavigate();
 
@@ -10,6 +15,8 @@ const AuthForm=()=>{
     const emailRef = useRef();
     const passwordRef = useRef();
     const confirmPasswordRef = useRef();
+    // const dispatch=useDispatch();
+    // const isLoggedIn=useSelector((state)=>state.login.isLoggedIn);
 
     const accountHandler = () => {
         setHaveAccount((preState) => {
@@ -67,10 +74,13 @@ const AuthForm=()=>{
           alert(err.message);
         }
       };
+
+     
     return(
         
         <div className={classes.wrapper}>
             <form className={classes.form} onSubmit={loginFormHandler}>
+              
              
                 {haveAccount && (<h4>login</h4>)}
                 {!haveAccount && (<h4>sign up</h4>)}

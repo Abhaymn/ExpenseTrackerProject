@@ -4,8 +4,10 @@ import React from "react";
 import { Button, Container, Nav, Navbar,NavLink } from "react-bootstrap";
 import { Link, Routes,Route ,BrowserRouter} from "react-router-dom";
 import AuthPage from "../pages/AuthPage";
+import ForgotPassword from "../pages/ForgotPasseord";
 import Main from "../pages/main";
-import LoginMessage from "../UserProfile/LoginMessage";
+import UserProfile from "../pages/UserProfile";
+
 
 // import AuthContext from "../Store/Auth-Context";
 
@@ -31,7 +33,10 @@ const Header=(props)=>{
                 <Route path="/login" element={<AuthPage/>}/>
                
                 <Route path='/main' element={<Main/>}/>
-                <Route path='/resetpassword' element={<LoginMessage/>}/>
+                {/* <Route path='/resetpassword' element={<LoginMessage/>}/> */}
+                <Route path="/resetpassword" element={<ForgotPassword/>}/>
+
+                <Route path="/complete" element={<UserProfile/>}/>
 
                 
                

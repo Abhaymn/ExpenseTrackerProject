@@ -1,10 +1,13 @@
-import UserProfile from "./UserProfile";
+
+import LoginMessage from "../UserProfile/LoginMessage";
+import Expenses from "./Expenses";
+
 
 const Main=()=>{
     return (
         <div className="mt-5 ">
-       
-        <UserProfile/>
+       <LoginMessage/>
+        <Expenses/>
         </div>
     )
 }

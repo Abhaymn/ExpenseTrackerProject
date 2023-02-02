@@ -9,6 +9,7 @@ import Main from "../pages/main";
 import UserProfile from "../pages/UserProfile";
 
 
+
 // import AuthContext from "../Store/Auth-Context";
 
 const Header=(props)=>{
@@ -37,6 +38,7 @@ const Header=(props)=>{
                 <Route path="/resetpassword" element={<ForgotPassword/>}/>
 
                 <Route path="/complete" element={<UserProfile/>}/>
+                
 
                 
                

@@ -117,6 +117,7 @@ const Expenses = () => {
           <Button type='submit'>Add Expense</Button>
         </div>
       </form>
+      
       {expenseList.length > 0 && (
         <div className={classes.items}>
           <div className={classes.title}>

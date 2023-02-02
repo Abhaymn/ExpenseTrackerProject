@@ -1,0 +1,33 @@
+.item {
+    padding: 10px 0 10px 0;
+    display: flex;
+    text-align: center;
+    background-color: rgb(153, 194, 249);
+  }
+  
+  .item .type, .item .amount {
+    flex-basis: 20%;
+    
+  }
+  
+  .item .description {
+    flex-basis: 35%;
+    
+  }
+  
+  .button {
+    flex-basis: 25%;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+  .button button {
+    margin: 0 10px 0 5px;
+    font-weight: bold;
+   
+  }
+  
+  .button button:active {
+    transform: scale(0.95);
+  }

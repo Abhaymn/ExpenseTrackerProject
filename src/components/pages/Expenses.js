@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { Button } from 'react-bootstrap';
 import classes from './Expenses.module.css';
 import ExpenseItems from '../ExpenseItems';
 import { expenseAction } from '../Store/expenseSlice';
@@ -114,7 +114,7 @@ const Expenses = () => {
           <textarea type='text' ref={descriptionRef} required />
         </div>
         <div className={classes.button}>
-          <button type='submit'>Add Expense</button>
+          <Button type='submit'>Add Expense</Button>
         </div>
       </form>
       {expenseList.length > 0 && (

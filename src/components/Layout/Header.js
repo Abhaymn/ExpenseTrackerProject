@@ -1,5 +1,5 @@
 import React from "react";
-
+import {  useSelector } from 'react-redux';
 // import { useContext } from "react";
 import { Button, Container, Nav, Navbar,NavLink } from "react-bootstrap";
 import { Link, Routes,Route ,BrowserRouter} from "react-router-dom";
@@ -13,7 +13,16 @@ import UserProfile from "../pages/UserProfile";
 // import AuthContext from "../Store/Auth-Context";
 
 const Header=(props)=>{
-  
+   
+   
+    const isLoggedIn=useSelector(state=>state.login.isLoggedIn);
+
+
+//   const logoutHandler=()=>{
+    
+//     dispatch(loginActions.logout());
+   
+//   }
    
     // const authCtx= useContext(AuthContext);
     // const isLoggedIn=authCtx.isLoggedIn;
@@ -26,7 +35,7 @@ const Header=(props)=>{
                         <NavLink as={Link} to="/login">login</NavLink>
                         {/* <NavLink as={Link} to='/main'>main</NavLink> */}
                     </Nav>
-                    <Button as={Link} to="/login">LogOut</Button>
+                    {isLoggedIn && <Button as={Link} to='/login'>LogOut</Button>}
                 </Container>
             </Navbar>
 
@@ -39,9 +48,8 @@ const Header=(props)=>{
 
                 <Route path="/complete" element={<UserProfile/>}/>
                 
-
                 
-               
+
             </Routes>
            
         </BrowserRouter>

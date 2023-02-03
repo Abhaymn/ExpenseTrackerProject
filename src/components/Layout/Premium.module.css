@@ -1,0 +1,28 @@
+.activate {
+    text-align: center;
+    margin-top: 40px;
+    box-sizing: border-box;
+    
+   
+  }
+  
+  .activate button {
+    padding: 8px 20px 8px 20px;
+    font-size: 18px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: #5ca8ff;
+    font-weight: bold;
+   color: rgb(233, 255, 255);
+  }
+  
+  .activate a {
+    text-decoration: none;
+    padding: 8px 20px 8px 20px;
+    font-size: 18px;
+    margin-right: 20px;
+    
+    border-radius: 5px;
+    background-color: #5ca8ff;
+    color: black;
+  }

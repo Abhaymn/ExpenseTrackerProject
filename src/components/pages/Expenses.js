@@ -95,6 +95,7 @@ const Expenses = () => {
     <React.Fragment>
       <Premium/>
       <form className={classes.form} onSubmit={addExpenseHandler}>
+        
         <div className={classes.type}>
           <label>Expense Category: </label>
           <select ref={typeRef} required>

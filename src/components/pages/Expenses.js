@@ -6,7 +6,7 @@ import ExpenseItems from '../ExpenseItems';
 import { expenseAction } from '../Store/expenseSlice';
 import { addingExpense } from '../Store/expense-actions';
 import { requestingExpense } from '../Store/expense-actions';
-
+import Premium from '../Layout/Premium';
 
 const Expenses = () => {
   const amountRef = useRef();
@@ -93,7 +93,7 @@ const Expenses = () => {
   // Expense Component
   return (
     <React.Fragment>
-      
+      <Premium/>
       <form className={classes.form} onSubmit={addExpenseHandler}>
         <div className={classes.type}>
           <label>Expense Category: </label>

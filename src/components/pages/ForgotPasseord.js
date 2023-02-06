@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { Button } from 'react-bootstrap';
 import classes from './ForgotPassword.module.css';
 
 const ForgotPassword = () => {
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
     <form className={classes.form} onSubmit={resetPasswordHandler}>
       <label>Enter the registered email</label>
       <input type='email' placeholder='email' ref={email} />
-      <button type='submit'>Send Link</button>
+      <Button type='submit'>Send Link</Button>
     </form>
   );
 };

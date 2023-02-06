@@ -12,7 +12,9 @@ const Expenses = () => {
   const amountRef = useRef();
   const typeRef = useRef();
   const descriptionRef = useRef();
+  
   const dispatch = useDispatch();
+
   const firstTime = useSelector((state) => state.expense.firstTime);
   const expenseList = useSelector((state) => state.expense.expenses);
   const totalAmount = useSelector((state) => state.expense.totalAmount);

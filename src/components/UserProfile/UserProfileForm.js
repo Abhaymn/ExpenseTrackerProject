@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-
-
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import classes from './UserProfileForm.module.css';
 
 const UserProfileForm = () => {
@@ -13,6 +13,7 @@ const UserProfileForm = () => {
 
   const profileSubmitHandler = async (event) => {
     event.preventDefault();
+    
     try {
       const res = await fetch(
         'https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyD8f02EMJN_lrE8oXOWzbJ-oxh_wcdaYJA',
@@ -92,7 +93,9 @@ const UserProfileForm = () => {
     <form className={classes.form} onSubmit={profileSubmitHandler}>
       <div className={classes.formHead}>
         <span>Contact Details</span>
-        <button>Cancel</button>
+        <div className={classes.cancel}>
+          <Button as={Link} to="/main" >Cancel</Button>
+        </div>
       </div>
       <div className={classes.formBody}>
         <label>Full Name:</label>

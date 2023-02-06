@@ -2,14 +2,16 @@ import classes from './AuthForm.module.css';
 import { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import { Button } from 'react-bootstrap';
 // import { useSelector,useDispatch } from 'react-redux';
 // import { loginActions } from '../Store/loginSlice';
 
 
 
+
 const AuthForm=()=>{
     const Navigate=useNavigate();
+    // const isLoggedIn=useSelector(state=>state.login.isLoggedIn);
 
     const [haveAccount, setHaveAccount] = useState(true);
     const emailRef = useRef();
@@ -36,7 +38,11 @@ const AuthForm=()=>{
     
       const loginFormHandler = async (event) => {
        
-        Navigate("/main")
+        
+         
+             Navigate("/main")
+            
+        
         
       
         event.preventDefault();
@@ -91,7 +97,7 @@ const AuthForm=()=>{
                     placeholder='confirm password'
                     ref={confirmPasswordRef}
                 />)}
-                <button type='submit'>{haveAccount ? 'Login' : 'Create Account'}</button>
+                <Button type='submit'>{haveAccount ? 'Login' : 'Create Account'}</Button>
                 {haveAccount ? <Link to='/resetpassword'>Forgot Password?</Link> : ''}
             </form>
             

@@ -41,7 +41,7 @@ const LoginMessage = () => {
         </span>
         <span className={classes.profile}>
           <span>Your profile is incomplete.</span>
-          <Link to='/main'>
+          <Link to='/complete'>
             <b> Complete now</b>
           </Link>
         </span>

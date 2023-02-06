@@ -1,7 +1,7 @@
 .mainProfile {
     
     display: flex;
-    margin-top: 80px;
+    margin-top: 70px;
     padding-bottom: 20px;
     border-bottom: 2px solid #808080;
     font-style: italic;
@@ -19,7 +19,7 @@
   .profile {
     font-size: 15px;
     flex-basis: 25%;
-    background-color: #d4c181;
+    background-color: #c2bebe;
     border-radius: 20px;
     margin-right: 5px;
     padding: 5px 10px 5px 10px;
@@ -33,13 +33,15 @@
   }
   
   .button {
-      text-align: center;
-      margin-top: 60px;
+      text-align:center;
+      margin-top: 50px;
+      
   }
   
   .button button {
-      margin: 0 100px 0 100px;
+      margin: 0 50px 0 100px;
       padding: 5px 20px 5px 20px;
+      background-color: #b9b9b9;
   }
   
   .button button:active {

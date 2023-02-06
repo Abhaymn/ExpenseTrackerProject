@@ -5,10 +5,10 @@
     box-shadow: 0 0 10px rgb(122, 119, 119);
     box-sizing: border-box;
     border-radius: 5px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     padding: 30px;
-    background-color: rgb(164, 171, 172);
+    background-color: rgb(162, 204, 247);
   }
   
   .type,
@@ -16,6 +16,7 @@
   .description {
     display: flex;
     margin-bottom: 10px;
+    font-weight:600;
   }
   
   .type select,
@@ -45,6 +46,7 @@
     width: 30%;
     padding: 5px 0 5px 0;
     font-size: 18px;
+    font-weight: bold;
     
   }
   
@@ -75,18 +77,23 @@
     text-align: center;
   }
   
-  .title a {
+  .title {
     flex-basis: 20%;
     text-align: center;
+    
   }
   
-  .title .titletype,
+  .title .titletype{
+    flex-basis: 20%;
+  }
   .title .titleamount {
     flex-basis: 20%;
+  
   }
   
   .title .titledescription {
     flex-basis: 35%;
+    
   }
   
   .total {
